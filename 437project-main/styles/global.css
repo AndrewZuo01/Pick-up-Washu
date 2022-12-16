@@ -1,0 +1,529 @@
+/* 
+    general
+        ...
+    nav and footer
+        ...
+        link of pick up washu
+    post text display
+    post card layout
+    all button
+        ...
+        neon-button square and shining effect
+        all shining text
+    create event page
+        ...
+    filter(working)
+        ...
+    card flip and edit event
+        ...
+*/
+/* general */
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+*:hover {
+    cursor: default;
+}
+
+body, h2 {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #2c2c2c;
+}
+.layout {
+    height: 95vh;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page {
+    width: 100%;
+    padding: 25px;
+    padding-bottom: 100px;
+}
+:root {
+    --clr-neon: rgba(255, 255, 255, 0.69);
+}
+/* nav and footer */
+.nav-bar {
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+.nav-btn {
+    margin: 0 5px;
+}
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 0.75em;
+    color: rgba(255, 255, 255, 0.738);
+  /* text-shadow:
+  0 0 7px #fff,
+  0 0 10px rgba(255, 255, 255, 0.738),
+  0 0 21px rgba(255, 255, 255, 0.738); */
+}
+/* link of pick-up washu */
+.link:link {
+    text-decoration: none;
+}
+.link:hover {
+    color: gray;
+    font-size: 20px;
+    text-decoration: none;
+}
+.link:visited {
+    text-decoration: none;
+    color: red;
+}
+
+/* post text display */
+
+.post-info-label {
+    display: block;
+    color: gray;
+}
+
+.post-info {
+    color: black;
+    display: inline;
+}
+/* post card*/
+.post-card {
+    margin-bottom: 40px;
+    box-shadow: 0px 1px 2px 0px rgb(130, 130, 130),
+            1px 2px 4px 0px rgb(130, 130, 130),
+            2px 4px 8px 0px rgb(130, 130, 130),
+            2px 4px 16px 0px rgb(130, 130, 130);
+}
+.card-organizer-text{
+    display: block;
+    color: gray;
+}
+.card-organizer{
+    display: inline;
+    color: gray;
+}
+/* all button */
+.btn {
+    white-space:normal;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+    color: salmon;
+    border: 2px solid salmon;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.btn:hover,
+a:hover,
+a strong:hover,
+.left:hover {
+    cursor: pointer;
+}
+.join-event,.show-attendance,.leave-event, .blast-message {
+    width:100%;
+    position: relative;
+    height: 40px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.join-event{
+    color: #FFA500;
+    border: 2px solid #FFA500; 
+}
+.show-attendance{
+    color: #00BFFF;
+    border: 2px solid #00BFFF; 
+}
+.leave-event{
+    color: rgb(218, 72, 72);
+    border: 2px solid rgb(218, 72, 72); /* Green */
+}
+.blast-message {
+    color: orange;
+}
+.join-event2,.edit-event,.delete-event{
+    width:50%;
+    position: relative;
+    height: 40px;
+    background-color: white;
+}
+.join-event2{
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    color: #FFA500;
+    border: 2px solid #FFA500; 
+}
+
+.edit-event{
+    /* edit event button on post */
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    display: inline;
+    color: #009e5f;
+    border: 2px solid #009e5f; 
+}
+.delete-event{
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    color: rgb(218, 72, 72);
+    border: 2px solid rgb(218, 72, 72);
+}
+.create-event-btn{
+    width: 280px;
+    height: 40px;
+    background-color: white;
+    color: rgb(59, 171, 59);
+    border: 2px solid rgb(59, 171, 59); 
+}
+.edit-event-btn{
+    color: rgb(59, 171, 59);
+    border: 2px solid rgb(59, 171, 59);
+    margin-top: 40%;
+    width: 90%;
+    margin-left: 5%;
+}
+*:disabled {
+    background-color: grey;
+    border: none; 
+    color: white;
+    opacity: 0.5;
+}
+.neon-button {
+    font-size: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    /* text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor; */
+    /* box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon); */
+    position: relative;
+    margin-bottom: 20px;
+}
+/* the light squre under neon button and shining effect*/
+.neon-button::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--clr-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.neon-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    /* background-color: var(--clr-neon); */
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+    /* color: var(--clr-bg); */
+    text-shadow: none;
+}
+.neon-button:hover::before,
+.neon-button:focus::before {
+    opacity: 1;
+}
+.neon-button:hover::after,
+.neon-button:focus::after {
+    opacity: 1;
+}
+/* all shining text */
+.page-title{
+    color: rgba(255, 255, 255);
+    /* text-shadow:
+      0 0 7px #fff,
+      0 0 10px rgba(255, 255, 255, 0.738),
+      0 0 21px rgba(255, 255, 255, 0.738); */
+      margin-bottom: 30px;
+}
+/* create event page */
+.create-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+    height: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    margin-top: 10%;
+    background-image: url(/images/background.png);
+}
+.form-field {
+    width: 80%;
+    max-width: 300px;
+}
+.form-field:not(textarea) {
+    height: 25px;
+}
+.form-field:hover {
+    cursor: text;
+}
+.large-field {
+    height: 80px;
+}
+.create-sport,.create-title{
+    width: 400px;
+}
+.create-time,.create-date,.create-capacity{
+    display: inline;
+    width: 130px;
+}
+.create-capacity{
+    display: inline;
+}
+/* filter */
+.filter-sport{
+    /* float: right; */
+    /* display: block; */
+    display: inline;
+    width: 20%;
+    /* height: 35px; */
+    /* font-size: 10px; */
+    background-color: transparent;
+    color: rgb(50, 248, 255);
+    border-color: rgb(50, 248, 255);
+    margin-right: 20px;
+}
+.inline{
+    /* float: right; */
+    width: 100px;
+    height: 50px;
+    display: inline;
+    vertical-align: top;
+}
+/* card flip and edit event*/
+.card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+  
+.card-back {
+    z-index: 3;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+}
+.card-front.flipped{
+    transform: rotateY(-180deg);
+}
+.card-back.flipped{
+    transform: rotateY(0deg);
+}
+.card-flip > div {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+.card-back-edit {
+    margin-top: 5%;
+    width: 80%;
+    margin-left: 5%;
+}
+.card-back-button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.card-matchfullsize {
+    width: 100%;
+    height: 100%;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    border-radius: 5px;
+    color: white;
+    padding: 2px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: red;
+    color: white;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #9a9292;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: rgb(185, 19, 19);}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+.message-box, .message-box:focus {
+    display: none;
+    width: 100%;
+    border: 2px solid blue;
+    height: 80px;
+}
+
+.blast-message-form, .blast-message-form:focus {
+    width: 100%;
+    border: 2px solid blue;
+    display: none;
+}
+
+#submit-button {
+    width: 100%;
+    color: blue;
+    border: none;
+    background-color: white;
+}
+
+#submit-button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: blue;
+}
+
+.list-of-users {
+    color: blue;
+    border: 1px solid blue;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.list-of-users:hover {
+    cursor: pointer;
+}
+
+#announcements {
+    color: orange;
+}
+
+.clickable-title {
+    background-color: white;
+    border: none;
+}
+
+button h2:hover {
+    cursor: pointer;
+}
+
+.message-board {
+    display: none;
+}
+
+
+
+.search-filter {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.search-filter-text {
+    height: 28px;
+    border: 1px solid red;
+}
+.search-filter-text:hover {
+    cursor: text;
+}
+.search-filter-text:focus-visible,
+.search-filter-text:focus,
+.search-filter-text:focus-within {
+    outline-color: red;
+}
+
+.dropbtn {
+    color: red;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid red;
+    width: 100px;
+    margin-left: 10px;
+    height: 28px;
+    padding: 0;
+    font-size: 16px;
+}
+.filter-name{
+    margin-left: 10px;
+    color:rgb(255, 255, 255)
+}
+.about-button {
+    display: block;
+}
+.about-image-div {
+    text-align: center;
+}
+.no-permission {
+    margin-bottom: 15px;
+    color: white;
+}
+.slots-left {
+    color: red
+}
+.left-event {
+    display: none;
+}
