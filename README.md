@@ -19,3 +19,10 @@ In mainfoler
 
 ## 🛠 Skills
 React.js, PostgreSQL
+
+
+## Authors
+- [@Andrew]
+- [@Ian]
+- [@Lien]
+- [@Mathhew]
