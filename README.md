@@ -2,6 +2,9 @@
 # Pick-Up Washu
 
  This is a sport events website for WashU students. 
+## Website
+
+https://pick-up-washu.vercel.app/
 
 ## Deployment
 
@@ -16,6 +19,8 @@ In mainfoler
 ```bash
     npm run dev
 ```
+
+you need to set up your own env variable
 
 ## 🛠 Skills
 React.js, PostgreSQL
